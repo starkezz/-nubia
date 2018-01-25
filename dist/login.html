@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/login.min.css">
+	<script type = "text/javascript" src = "js/require.js" async = "true" defer data-main = "js/main"></script>
+</head>
+<body>
+	<!-- 登录框 -->
+	<div class="box">
+		<div class="logo">
+		</div>
+		<div class="loginform">
+			<div class="navtab" id="tab_nav">
+				<label for="tab-mobile" class="tab-btn cur" style="margin-right:8px"><input type="radio" name="myradio" id="tab-mobile" value="mobile" checked="checked">努比亚账号登录</label>|
+				<label for="tab-email" class="tab-btn" style="margin-left:8px"><input type="radio" name="myradio" id="tab-email" value="email">手机验证码登录</label>
+			</div>
+			<div class="navcon" id="tab_con">
+				<div class="reg-id">
+						<dl>
+							<dd>
+	                            <div class="input-con">
+	                            	<input type="text" id="username" name="username" placeholder="邮箱/手机号码/用户名" datatype="*" errormsg="手机号码格式错误"> 
+	                            	<span class="icon-id"></span>
+	                            </div>
+								<div class="checktip" id="user_name_tag"></div>
+							</dd>
+						</dl>
+						<dl>
+							<dd>
+								<div class="input-con">
+	                                <input type="password" id="password" name="password" placeholder="密码为6-16个字符（数字、字母、符号至少包含两种）">
+	                            </div>
+								<div class="checktip" id="password_tag">
+									<span class="Validform_checktip"></span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="reg-phone">
+						<dl>
+							<dd>
+								<div class="input-con">
+	                                <input type="text" id="mobile" name="mobile" placeholder="手机号码" datatype="m" errormsg="手机号码格式错误" ajaxurl="/login/checkmobile.action">
+	                                <span class="icon-id"></span>
+	                            </div>
+								<div class="checktip" id="mobile-tag"></div>
+							</dd>
+						</dl>
+						<dl>
+							<dd>
+								<div class="input-con">
+	                                <input type="text" id="mobile_captcha" name="captcha" placeholder="请输入验证码（不区分大小写）" datatype="*" ajaxurl="/verification/check2.action" errormsg="验证码有错误" style="width:235px;">
+	                                <div class="capcha capcha-mobile">
+	                                    <a href=""><img src="https://account.nubia.com/verification/draw.action" alt=""></a>
+	                                </div>
+	                            </div>
+								<div class="checktip"></div>
+							</dd>
+						</dl>
+						<dl>
+							<dd>
+								<div class="input-con">
+	                                <input type="text" id="mobileValidateCode" name="mobileValidateCode" placeholder="请输入手机验证码" datatype="*">
+	                                <input type="button" value="获取验证码" class="btn-code" id="btn-code-mobile">
+	                            </div>
+								<div class="checktip"><span class="Validform_checktip"></span></div>
+							</dd>
+						</dl>
+						<div id="mobile-tips" style="color:red"></div>
+					</div>
+					<!-- 立即登录 -->
+					<input type="button" style="margin-top:10px" id="login_btn_id" value="立即登录" class="btn-login"/>
+					<div class="register-now">
+					<a href="/login/register.action?back_url=https%3A%2F%2Fwww.nubia.com%2Factive%2Fnewyearsale.html" style="color:#e8380d">注册新账号</a>
+					<span style="font-size: 18px;padding: 0 7px;color: #d5d5d5;">|</span>
+					<a style="color:#34383d" href="/login/fetchpassword.action?back_url=https%3A%2F%2Fwww.nubia.com%2Factive%2Fnewyearsale.html">忘记密码?</a>
+					</div>
+					<!-- 第三方登录 -->
+					<div class="third-login">
+						<span style="float:left;line-height:30px;">其他方式登录：</span>
+						<a href="" class="qq"></a>
+						<a href="" class="weibo"></a>
+						<a href="" class="alipay"></a>
+						<a href="" class="wx"></a>
+					</div>
+
+			</div>
+		
+			</div>
+		</div>
+	</div>
+	<footer>
+	    <div class="nubia-copyright">
+	        <p class="nb-footer-info"> 2012-2017 努比亚 版权所有 <a href="http://www.miibeian.gov.cn/">粤ICP备10006213号-2</a> ICP经营许可证编号：粤B2-20120688<a href="https://cert.ebs.gov.cn/D52B1891-CB9A-4FD0-8BC6-1D5650B567CE" target="_blank" style="margin-right: 5px;margin-left: 3px;"><img src="../images/govIcon.png" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示" border="0" style="border-width:0px;border:hidden; border:none;vertical-align: middle;height: 18px;"></a> 努比亚技术有限公司</p>
+	    </div>
+	</footer>
+
+</body>
+</html>

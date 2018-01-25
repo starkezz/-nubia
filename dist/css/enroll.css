@@ -1,0 +1,126 @@
+@charset "UTF-8";
+body {
+  background: #f5f5f5; }
+
+.box {
+  width: 850px;
+  background: white;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  /*切换登陆方式*/ }
+  .box .logo {
+    background: url(../images/nubia-logo.png) no-repeat;
+    background-position: 0 -55px;
+    width: 156px;
+    height: 55px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    top: 30px; }
+  .box .tab_nav {
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 25px; }
+    .box .tab_nav span {
+      font-size: 16px;
+      color: #333333; }
+    .box .tab_nav .tab_phone {
+      color: red; }
+  .box .en_phone {
+    width: 370px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .box .en_phone input {
+      width: 356px;
+      height: 44px;
+      margin-top: 20px;
+      outline: none; }
+    .box .en_phone .code_box {
+      position: relative;
+      width: 370px; }
+      .box .en_phone .code_box .code {
+        width: 231px; }
+      .box .en_phone .code_box .code_pic {
+        width: 120px;
+        height: 48px;
+        margin-top: 20px;
+        position: absolute; }
+    .box .en_phone .phone_code {
+      width: 370px; }
+      .box .en_phone .phone_code .insert_code {
+        width: 255px; }
+      .box .en_phone .phone_code .get_code {
+        width: 100px;
+        outline: none;
+        border: 1px solid gray;
+        background: white; }
+  .box .en_email {
+    width: 370px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: none; }
+    .box .en_email input {
+      width: 356px;
+      height: 44px;
+      margin-top: 20px;
+      outline: none; }
+    .box .en_email .code_box {
+      position: relative;
+      width: 370px; }
+      .box .en_email .code_box .code {
+        width: 231px; }
+      .box .en_email .code_box .code_pic {
+        width: 120px;
+        height: 48px;
+        margin-top: 20px;
+        position: absolute; }
+    .box .en_email .phone_code {
+      width: 370px; }
+      .box .en_email .phone_code .insert_code {
+        width: 255px; }
+      .box .en_email .phone_code .get_code {
+        width: 100px;
+        outline: none;
+        border: 1px solid gray;
+        background: white; }
+  .box .ok {
+    width: 370px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .box .ok .check .check_box {
+      width: 15px;
+      height: 15px; }
+    .box .ok .check span {
+      font-size: 12px;
+      color: #666666; }
+    .box .ok .check a {
+      color: red;
+      text-decoration: none; }
+    .box .ok .submit {
+      width: 360px;
+      height: 50px;
+      background: #e8380d;
+      margin-top: 10px;
+      outline: none;
+      border: none;
+      color: white;
+      font-size: 20px; }
+    .box .ok p {
+      text-align: right; }
+      .box .ok p a {
+        color: red;
+        text-decoration: none; }
+
+footer {
+  padding: 10px 0 50px 0;
+  text-align: center;
+  color: #cccccc;
+  font-size: 10px; }
+  footer a {
+    text-decoration: none;
+    color: #cccccc; }

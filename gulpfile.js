@@ -23,7 +23,7 @@ gulp.task("images",() => {
 const scss = require("gulp-sass-china");
 const minify = require("gulp-minify-css");
 const rename = require("gulp-rename");
-
+// 整理index.scss
 gulp.task("scss-index",() => {
 	return gulp.src("scss/index.scss")
 	.pipe(scss())
@@ -33,6 +33,37 @@ gulp.task("scss-index",() => {
 	.pipe(gulp.dest("dist/css"))
 	.pipe(connect.reload());
 })
+// 整理login.scss
+gulp.task("scss-login",() => {
+	return gulp.src("scss/login.scss")
+	.pipe(scss())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minify())
+	.pipe(rename("login.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
+// 整理enroll.scss
+gulp.task("scss-enroll",() => {
+	return gulp.src("scss/enroll.scss")
+	.pipe(scss())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minify())
+	.pipe(rename("enroll.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
+// 整理z17.scss
+gulp.task("scss-z17",() => {
+	return gulp.src("scss/z17.scss")
+	.pipe(scss())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minify())
+	.pipe(rename("z17.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
+
 
 /*
 	拷贝js文件
@@ -55,7 +86,7 @@ gulp.task("data",() => {
 /*
 	上述操作是整理文件，作为整体，建立一个项目的整体，让他们一起执行。
  */
-gulp.task("build",["copy-html","images","scripts","data","scss-index"],()=>{
+gulp.task("build",["copy-html","images","scripts","data","scss-index","scss-login","scss-enroll","scss-z17"],()=>{
 	console.log("编译成功");
 })
 
@@ -72,7 +103,11 @@ gulp.task("watch",function(){
 	gulp.watch("images/**/*",["images"]);
 	gulp.watch("js/*.js",["scripts"]);
 	gulp.watch("data/*.json",["data"]);
-	gulp.watch("scss/index.scss",["scss-index"])
+	gulp.watch("scss/index.scss",["scss-index"]);
+	gulp.watch("scss/login.scss",["scss-login"]);
+	gulp.watch("scss/enroll.scss",["scss-enroll"]);
+	gulp.watch("scss/z17.scss",["scss-z17"]);
+
 
 	
 })

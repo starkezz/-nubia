@@ -1,0 +1,105 @@
+body {
+  background: #f5f5f5; }
+
+.box {
+  width: 850px;
+  margin: 60px auto;
+  background: white; }
+  .box .logo {
+    background: url(../images/nubia-logo.png) no-repeat;
+    background-position: 0 -55px;
+    width: 156px;
+    height: 55px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    top: 30px; }
+  .box .loginform {
+    width: 370px;
+    margin: 0 auto; }
+    .box .loginform .navtab {
+      font-size: 18px;
+      color: #333;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 40px; }
+      .box .loginform .navtab #tab-mobile, .box .loginform .navtab #tab-email {
+        display: none; }
+      .box .loginform .navtab .cur {
+        color: red; }
+    .box .loginform .navcon {
+      overflow: hidden; }
+      .box .loginform .navcon .input-con input {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        padding-left: 10px;
+        border: 1px solid #e0e4e7;
+        vertical-align: middle;
+        font-size: 12px;
+        outline-style: none; }
+      .box .loginform .navcon .reg-phone {
+        display: none; }
+        .box .loginform .navcon .reg-phone .input-con div {
+          width: 120px;
+          height: 48px; }
+          .box .loginform .navcon .reg-phone .input-con div img {
+            width: 120px;
+            height: 48px; }
+      .box .loginform .navcon .btn-login {
+        width: 360px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 20px;
+        font-size: 20px;
+        background: #e8380d;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin: 0 auto; }
+      .box .loginform .navcon .register-now {
+        text-align: right;
+        margin-top: 10px; }
+      .box .loginform .navcon .third-login {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        overflow: hidden; }
+        .box .loginform .navcon .third-login a {
+          width: 29px;
+          height: 29px;
+          background: pink;
+          display: block;
+          float: left;
+          margin-left: 15px;
+          transition: 0s; }
+        .box .loginform .navcon .third-login .qq {
+          background: url(../images/third_login.png) no-repeat; }
+        .box .loginform .navcon .third-login .weibo {
+          background: url(../images/third_login.png) no-repeat;
+          background-position: -29px 0; }
+        .box .loginform .navcon .third-login .alipay {
+          background: url(../images/third_login.png) no-repeat;
+          background-position: -58px 0; }
+        .box .loginform .navcon .third-login .wx {
+          background: url(../images/third_login.png) no-repeat;
+          background-position: -87px 0; }
+        .box .loginform .navcon .third-login .qq:hover {
+          background-position: 0 -29px; }
+        .box .loginform .navcon .third-login .weibo:hover {
+          background-position: -29px -29px; }
+        .box .loginform .navcon .third-login .alipay:hover {
+          background-position: -58px -29px; }
+        .box .loginform .navcon .third-login .wx:hover {
+          background-position: -87px -29px; }
+
+footer {
+  padding: 10px 0 50px 0;
+  text-align: center;
+  color: #cccccc;
+  font-size: 10px; }
+  footer a {
+    text-decoration: none;
+    color: #cccccc; }

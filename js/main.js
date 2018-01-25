@@ -8,8 +8,7 @@ require.config({
 		//模块名字：模块路径
 		"jquery":"jquery-1.11.3",  //遵从AMD规范
 		"jquery-cookie":"jquery.cookie",
-		"index":"index",
-		//"fade":"fade"  不知道需不需要引入
+		"index":"index"
 	},
 	shim:{
 		/*
@@ -36,3 +35,13 @@ require(["fade"], function(fade){
 	console.log(fade.fade());
 })
 
+
+//要去调用login.js中的main
+require(["login"],function(login){
+	console.log(login.main());
+})
+
+//要去调用Z17.js中的main
+require(["z17"],function(z17){
+	console.log(z17.main());
+})
