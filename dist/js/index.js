@@ -266,8 +266,8 @@ define(["jquery", "jquery-cookie"], function($){
 						//<1>获取上一次的scrollTop值
 						var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 
-						document.body.scrollTop = scrollTop - 10;
-						document.documentElement.scrollTop = scrollTop - 10;
+						document.body.scrollTop = scrollTop - 30;
+						document.documentElement.scrollTop = scrollTop - 30;
 						if(scrollTop <= 0){
 							clearInterval(timer);
 						}

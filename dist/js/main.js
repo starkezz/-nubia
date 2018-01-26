@@ -45,3 +45,8 @@ require(["login"],function(login){
 require(["z17"],function(z17){
 	console.log(z17.main());
 })
+
+//要去调用order中的main
+require(["order"],function(order){
+	console.log(order.order());
+})

@@ -11,18 +11,216 @@ define(["jquery", "jquery-cookie"], function($){
 		$(function(){
 			
 			$(window).on("scroll",function(){
+				//顶部悬浮
 				var top = $(window).scrollTop();
-				if(top > 100){
+				if(top >= 100){
 					$(".top").css("display","block");
-					$(".top").animate({"height":60},1000);
+					$(".top").animate({"height":60},500);
 				}else{
-					$(".top").animate({"height":0},1000);
 					$(".top").css("display","none");
+				}
 
+				//left随着页面滚动设置位置
+				if(top >= 127 && top < 620 ){
+					
+					$(".main_left").css({"position":"fixed","top":0});
+				}else if(top >= 620){
+					$(".main_left").css({"position":"absolute","bottom":0,"top":""});
+				}else{
+					$(".main_left").css({"position":""});
 				}
 
 				
 			})
+			//设置滚动事件之前的left位置
+			var left_top = $(window).scrollTop();
+			if(left_top >= 127 && left_top < 620 ){		
+				$(".main_left").css({"position":"fixed","top":0});
+			}else if(left_top >= 620){
+				$(".main_left").css({"position":"absolute","bottom":0});
+			}else{
+				$(".main_left").css({"position":""});
+			}
+
+
+			//获取到商品参数
+			$.ajax({
+				url:"../data/z17.json",
+				type:"GET",
+				success:function(res){
+					// 获取到颜色
+					$("#color1").html(res[0].color);
+					$("#color2").html(res[1].color);
+					//获取到小图
+					$(".main_left ul li").eq(1).find("img").attr("src",res[0].pic2);
+					$(".main_left ul li").eq(0).find("img").attr("src",res[0].pic1);
+					$(".main_left ul li").eq(2).find("img").attr("src",res[0].pic3);
+					$(".main_left ul li").eq(3).find("img").attr("src",res[0].pic4);
+					//显示大图
+					$(".main_left .pic1").attr("src",res[0].pic1);
+
+					//点击切换图片
+					$(".main_left ul li").eq(0).click(function(){
+						$(".main_left .pic1").attr("src",res[0].pic1);
+						$(".main_left ul li").eq(0).attr("class","active");
+						$(".main_left ul li").eq(0).siblings().attr("class","");
+					})
+					$(".main_left ul li").eq(1).click(function(){
+						$(".main_left .pic1").attr("src",res[0].pic2);
+						$(".main_left ul li").eq(1).attr("class","active");
+						$(".main_left ul li").eq(1).siblings().attr("class","");
+					})
+					$(".main_left ul li").eq(2).click(function(){
+						$(".main_left .pic1").attr("src",res[0].pic3);
+						$(".main_left ul li").eq(2).attr("class","active");
+						$(".main_left ul li").eq(2).siblings().attr("class","");
+					})
+					$(".main_left ul li").eq(3).click(function(){
+						$(".main_left .pic1").attr("src",res[0].pic4);
+						$(".main_left ul li").eq(3).attr("class","active");
+						$(".main_left ul li").eq(3).siblings().attr("class","");
+					})
+
+					//点击切换手机信息
+					//黑金
+					$("#color2").click(function(){
+						$("#color2").attr("class","active");
+						$("#color2").siblings().attr("class","");
+						//获取小图
+						$(".main_left ul li").eq(1).find("img").attr("src",res[1].pic2);
+						$(".main_left ul li").eq(0).find("img").attr("src",res[1].pic1);
+						$(".main_left ul li").eq(2).find("img").attr("src",res[1].pic3);
+						$(".main_left ul li").eq(3).find("img").attr("src",res[1].pic4);
+						//显示大图
+						$(".main_left .pic1").attr("src",res[1].pic1);
+
+						//点击切换图片
+						$(".main_left ul li").eq(0).click(function(){
+							$(".main_left .pic1").attr("src",res[1].pic1);
+							$(".main_left ul li").eq(0).attr("class","active");
+							$(".main_left ul li").eq(0).siblings().attr("class","");
+						})
+						$(".main_left ul li").eq(1).click(function(){
+							$(".main_left .pic1").attr("src",res[1].pic2);
+							$(".main_left ul li").eq(1).attr("class","active");
+							$(".main_left ul li").eq(1).siblings().attr("class","");
+						})
+						$(".main_left ul li").eq(2).click(function(){
+							$(".main_left .pic1").attr("src",res[1].pic3);
+							$(".main_left ul li").eq(2).attr("class","active");
+							$(".main_left ul li").eq(2).siblings().attr("class","");
+						})
+						$(".main_left ul li").eq(3).click(function(){
+							$(".main_left .pic1").attr("src",res[1].pic4);
+							$(".main_left ul li").eq(3).attr("class","active");
+							$(".main_left ul li").eq(3).siblings().attr("class","");
+						})
+
+					})
+					//极光蓝
+					$("#color1").click(function(){
+						$("#color1").attr("class","active");
+						$("#color1").siblings().attr("class","");
+						//获取小图
+						$(".main_left ul li").eq(1).find("img").attr("src",res[0].pic2);
+						$(".main_left ul li").eq(0).find("img").attr("src",res[0].pic1);
+						$(".main_left ul li").eq(2).find("img").attr("src",res[0].pic3);
+						$(".main_left ul li").eq(3).find("img").attr("src",res[0].pic4);
+						//显示大图
+						$(".main_left .pic1").attr("src",res[0].pic1);
+
+						//点击切换图片
+						$(".main_left ul li").eq(0).click(function(){
+							$(".main_left .pic1").attr("src",res[0].pic1);
+							$(".main_left ul li").eq(0).attr("class","active");
+							$(".main_left ul li").eq(0).siblings().attr("class","");
+						})
+						$(".main_left ul li").eq(1).click(function(){
+							$(".main_left .pic1").attr("src",res[0].pic2);
+							$(".main_left ul li").eq(1).attr("class","active");
+							$(".main_left ul li").eq(1).siblings().attr("class","");
+						})
+						$(".main_left ul li").eq(2).click(function(){
+							$(".main_left .pic1").attr("src",res[0].pic3);
+							$(".main_left ul li").eq(2).attr("class","active");
+							$(".main_left ul li").eq(2).siblings().attr("class","");
+						})
+						$(".main_left ul li").eq(3).click(function(){
+							$(".main_left .pic1").attr("src",res[0].pic4);
+							$(".main_left ul li").eq(3).attr("class","active");
+							$(".main_left ul li").eq(3).siblings().attr("class","");
+						})
+
+					})
+
+
+
+				}
+			})
+
+
+
+
+
+
+			//设置cookie，添加到购物车
+			$(".buy").click(function(){
+				var which = $("#color1").attr("class");
+				var id = null;
+				if(which == "active"){
+					id = 0;
+				}else{
+					id = 1;
+				}
+				
+				var first = $.cookie("goods") == null ? true : false;
+				if(first){ //第一次添加
+					//设置cookie  [{id:id,num:1}]
+					$.cookie("goods", "[{id:" + id + ",num:1}]", {
+						expires: 7
+					});
+				}else{
+					//c:判断之前是否有添加过该商品
+					var str = $.cookie("goods");
+					var arr = eval(str);
+					var same = false; //代表是否有相同商品
+
+					//b:遍历所有的对象，判断id是否有相同的，如果有num++
+					for(var i in arr){
+						if(arr[i].id == id){
+							arr[i].num++;
+
+							var cookieStr = JSON.stringify(arr);
+							$.cookie("goods", cookieStr, {
+								expires: 7
+							})
+							same = true;
+							break;
+						}
+					}
+
+					//e:是否有相同的商品 新增商品 数量是1
+					if(!same){
+						var obj = {id: id, num: 1};
+						arr.push(obj);
+						var cookieStr = JSON.stringify(arr);
+						$.cookie("goods", cookieStr, {
+							expires: 7
+						});
+					}
+				}
+
+			})
+
+
+
+
+
+
+
+
+
+
 
 
 
