@@ -10,6 +10,7 @@ header{width: 100%; background: black;position: relative;
 			li{list-style:none; color:white;float: left; font-size: 12px;bold:bolder;line-height:12px;margin-top: 27px; width: 80px; height: 66px;}
 		}
 		div{color: white;float: right;width: 174px;
+			a{text-decoration: none;color: white;}
 			p:last-child{float:right;line-height: 66px;width: 54px;}
 			p:first-child{float: right;width: 120px;height: 66px;background: red;color:white;text-align:center;line-height:66px;bold:bolder;}
 		}

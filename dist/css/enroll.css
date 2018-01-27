@@ -32,12 +32,42 @@ body {
   .box .en_phone {
     width: 370px;
     margin: 0 auto;
-    overflow: hidden; }
+    position: relative; }
     .box .en_phone input {
       width: 356px;
       height: 44px;
       margin-top: 20px;
       outline: none; }
+    .box .en_phone .check_num {
+      position: absolute;
+      line-height: 20px;
+      height: 20px;
+      color: #F00;
+      font-size: 12px;
+      top: 30px;
+      right: -107px;
+      width: 100px;
+      white-space: nowrap; }
+    .box .en_phone .check_pass {
+      position: absolute;
+      line-height: 20px;
+      height: 20px;
+      color: #F00;
+      font-size: 12px;
+      top: 100px;
+      right: -107px;
+      width: 100px;
+      white-space: nowrap; }
+    .box .en_phone .check_code {
+      position: absolute;
+      line-height: 20px;
+      height: 20px;
+      color: #F00;
+      font-size: 12px;
+      top: 170px;
+      right: -107px;
+      width: 100px;
+      white-space: nowrap; }
     .box .en_phone .code_box {
       position: relative;
       width: 370px; }
@@ -60,13 +90,43 @@ body {
   .box .en_email {
     width: 370px;
     margin: 0 auto;
-    overflow: hidden;
-    display: none; }
+    display: none;
+    position: relative; }
     .box .en_email input {
       width: 356px;
       height: 44px;
       margin-top: 20px;
       outline: none; }
+    .box .en_email .check_mail {
+      position: absolute;
+      line-height: 20px;
+      height: 20px;
+      color: #F00;
+      font-size: 12px;
+      top: 30px;
+      right: -107px;
+      width: 100px;
+      white-space: nowrap; }
+    .box .en_email .check_pass {
+      position: absolute;
+      line-height: 20px;
+      height: 20px;
+      color: #F00;
+      font-size: 12px;
+      top: 100px;
+      right: -107px;
+      width: 100px;
+      white-space: nowrap; }
+    .box .en_email .check_code {
+      position: absolute;
+      line-height: 20px;
+      height: 20px;
+      color: #F00;
+      font-size: 12px;
+      top: 170px;
+      right: -107px;
+      width: 100px;
+      white-space: nowrap; }
     .box .en_email .code_box {
       position: relative;
       width: 370px; }
@@ -110,6 +170,8 @@ body {
       border: none;
       color: white;
       font-size: 20px; }
+    .box .ok .submit:hover {
+      cursor: pointer; }
     .box .ok p {
       text-align: right; }
       .box .ok p a {

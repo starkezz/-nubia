@@ -44,6 +44,9 @@ header {
       color: white;
       float: right;
       width: 174px; }
+      header .top_menu div a {
+        text-decoration: none;
+        color: white; }
       header .top_menu div p:last-child {
         float: right;
         line-height: 66px;

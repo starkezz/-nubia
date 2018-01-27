@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>登录</title>
 	<link rel="stylesheet" href="css/login.min.css">
 	<script type = "text/javascript" src = "js/require.js" async = "true" defer data-main = "js/main"></script>
 </head>
@@ -17,74 +17,47 @@
 				<label for="tab-email" class="tab-btn" style="margin-left:8px"><input type="radio" name="myradio" id="tab-email" value="email">手机验证码登录</label>
 			</div>
 			<div class="navcon" id="tab_con">
-				<div class="reg-id">
-						<dl>
-							<dd>
-	                            <div class="input-con">
-	                            	<input type="text" id="username" name="username" placeholder="邮箱/手机号码/用户名" datatype="*" errormsg="手机号码格式错误"> 
-	                            	<span class="icon-id"></span>
-	                            </div>
-								<div class="checktip" id="user_name_tag"></div>
-							</dd>
-						</dl>
-						<dl>
-							<dd>
-								<div class="input-con">
-	                                <input type="password" id="password" name="password" placeholder="密码为6-16个字符（数字、字母、符号至少包含两种）">
-	                            </div>
-								<div class="checktip" id="password_tag">
-									<span class="Validform_checktip"></span>
-								</div>
-							</dd>
-						</dl>
+
+				<!-- 用户名 登录 -->
+				<div class="log_name">
+					<input type="text" class="login_name" name="" placeholder="邮箱/手机号码/用户名"><span class="check_num"></span>
+					<br/>
+					<input type="password" class="password" name="" placeholder="密码为6-16个字符（数字、字母、符号至少包含两种)">
+					<span class="check_pass"></span>
+				</div>
+				<!-- 手机号 登录 -->
+				<div class="log_mail">
+					<input type="text" class="login_num" name="" placeholder="手机号码">
+					<span class="check_log_num"></span>
+					<br/>
+					<div class="code_box">
+						<input type="text" class="code" name="" placeholder="请输入验证码（不区分大小写）">
+						<img class="code_pic" src="https://account.nubia.com/verification/draw.action">
 					</div>
-					<div class="reg-phone">
-						<dl>
-							<dd>
-								<div class="input-con">
-	                                <input type="text" id="mobile" name="mobile" placeholder="手机号码" datatype="m" errormsg="手机号码格式错误" ajaxurl="/login/checkmobile.action">
-	                                <span class="icon-id"></span>
-	                            </div>
-								<div class="checktip" id="mobile-tag"></div>
-							</dd>
-						</dl>
-						<dl>
-							<dd>
-								<div class="input-con">
-	                                <input type="text" id="mobile_captcha" name="captcha" placeholder="请输入验证码（不区分大小写）" datatype="*" ajaxurl="/verification/check2.action" errormsg="验证码有错误" style="width:235px;">
-	                                <div class="capcha capcha-mobile">
-	                                    <a href=""><img src="https://account.nubia.com/verification/draw.action" alt=""></a>
-	                                </div>
-	                            </div>
-								<div class="checktip"></div>
-							</dd>
-						</dl>
-						<dl>
-							<dd>
-								<div class="input-con">
-	                                <input type="text" id="mobileValidateCode" name="mobileValidateCode" placeholder="请输入手机验证码" datatype="*">
-	                                <input type="button" value="获取验证码" class="btn-code" id="btn-code-mobile">
-	                            </div>
-								<div class="checktip"><span class="Validform_checktip"></span></div>
-							</dd>
-						</dl>
-						<div id="mobile-tips" style="color:red"></div>
+					<span class="check_code"></span>
+					<div class="phone_code">
+						<input type="text" class="insert_code" name="" placeholder="请输入手机验证码">
+						<input type="button" class="get_code" name="" value="获取验证码">
 					</div>
-					<!-- 立即登录 -->
-					<input type="button" style="margin-top:10px" id="login_btn_id" value="立即登录" class="btn-login"/>
-					<div class="register-now">
-					<a href="/login/register.action?back_url=https%3A%2F%2Fwww.nubia.com%2Factive%2Fnewyearsale.html" style="color:#e8380d">注册新账号</a>
-					<span style="font-size: 18px;padding: 0 7px;color: #d5d5d5;">|</span>
-					<a style="color:#34383d" href="/login/fetchpassword.action?back_url=https%3A%2F%2Fwww.nubia.com%2Factive%2Fnewyearsale.html">忘记密码?</a>
-					</div>
-					<!-- 第三方登录 -->
-					<div class="third-login">
-						<span style="float:left;line-height:30px;">其他方式登录：</span>
-						<a href="" class="qq"></a>
-						<a href="" class="weibo"></a>
-						<a href="" class="alipay"></a>
-						<a href="" class="wx"></a>
-					</div>
+				</div>
+
+
+
+				<!-- 立即登录 -->
+				<input type="button" style="margin-top:10px" id="login_btn_id" value="立即登录" class="btn-login" onclick="window.location.href='http://localhost:8888'"/>
+				<div class="register-now">
+				<a href="http://localhost:8888/enroll.html" style="color:#e8380d">注册新账号</a>
+				<span style="font-size: 18px;padding: 0 7px;color: #d5d5d5;">|</span>
+				<a style="color:#34383d" href="/login/fetchpassword.action?back_url=https%3A%2F%2Fwww.nubia.com%2Factive%2Fnewyearsale.html">忘记密码?</a>
+				</div>
+				<!-- 第三方登录 -->
+				<div class="third-login">
+					<span style="float:left;line-height:30px;">其他方式登录：</span>
+					<a href="" class="qq"></a>
+					<a href="" class="weibo"></a>
+					<a href="" class="alipay"></a>
+					<a href="" class="wx"></a>
+				</div>
 
 			</div>
 		

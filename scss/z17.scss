@@ -40,6 +40,11 @@ header{width: 100%; background: black;position: relative;
 		li:hover{border-bottom: 2px solid #e3381f;}
 	}
 }
+
+.buy_ok{position: absolute;width: 100px;height: 30px;background: red;text-align: center;color: white;opacity: 0;border-radius: 15px;line-height: 30px;right: 0;top:1280px;}
+
+
+
 .main{width: 1200px;margin: 0 auto;position: relative;overflow: hidden;border-bottom: 1px solid #e5e5e5;
 	.main_left{width: 565px;text-align: center;position: relative;overflow: hidden;float: left;
 		.pic1{margin-top: 50px;}

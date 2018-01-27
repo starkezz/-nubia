@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>注册</title>
 	<!-- 与登录共用一个login.js文件 -->
 	<link rel="stylesheet" href="css/enroll.min.css">
 	<script type = "text/javascript" src = "js/require.js" async = "true" defer data-main = "js/main"></script>
@@ -18,13 +18,15 @@
 		</div>
 		<!-- 手机号	注册 -->
 		<div class="en_phone">
-			<input type="text" class="phone_num" name="" placeholder="请输入手机号码">
+			<input type="text" class="phone_num" name="" placeholder="请输入手机号码"><span class="check_num"></span>
 			<br/>
 			<input type="password" class="password" name="" placeholder="密码为6-16个字符（数字、字母、符号至少包含两种)">
+			<span class="check_pass"></span>
 			<div class="code_box">
 				<input type="text" class="code" name="" placeholder="请输入验证码（不区分大小写）">
 				<img class="code_pic" src="https://account.nubia.com/verification/draw.action">
 			</div>
+			<span class="check_code"></span>
 			<div class="phone_code">
 				<input type="text" class="insert_code" name="" placeholder="请输入手机收到的验证码">
 				<input type="button" class="get_code" name="" value="获取验证码">
@@ -32,13 +34,16 @@
 		</div>
 		<!-- 邮箱 注册 -->
 		<div class="en_email">
-			<input type="text" class="phone_num" name="" placeholder="请输入常用邮箱地址">
+			<input type="text" class="mail_num" name="" placeholder="请输入常用邮箱地址">
+			<span class="check_mail"></span>
 			<br/>
 			<input type="password" class="password" name="" placeholder="密码为6-16个字符（数字、字母、符号至少包含两种)">
+			<span class="check_pass"></span>
 			<div class="code_box">
 				<input type="text" class="code" name="" placeholder="请输入验证码（不区分大小写）">
 				<img class="code_pic" src="https://account.nubia.com/verification/draw.action">
 			</div>
+			<span class="check_code"></span>
 			<div class="phone_code">
 				<input type="text" class="insert_code" name="" placeholder="请输入邮箱收到的验证码">
 				<input type="button" class="get_code" name="" value="获取验证码">
@@ -48,8 +53,8 @@
 			<div class="check">
 				<input type="checkbox" class="check_box" checked="checked" name=""><span>我已阅读并接受 <a href="">用户协议</a>和 <a href="">隐私政策</a></span>
 			</div>
-			<input type="submit" name="" class="submit" placeholder="提 交">
-			<p>已有账号，<a href="">直接登录</a></p>
+			<input type="submit" name="" class="submit" placeholder="提 交" onclick="window.location.href='http://localhost:8888/login.html'"/>
+			<p>已有账号，<a href="http://localhost:8888/login.html">直接登录</a></p>
 		</div>
 	</div>
 	<footer>

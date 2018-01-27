@@ -242,7 +242,6 @@ define(["jquery", "jquery-cookie"], function($){
 				var l= e.pageX-$(".mark").offset().left - $(".layer").width()/2 ;
 				
 				var t= e.pageY-$(".mark").offset().top;
-				document.title=l+","+t;
 				if(l<0)
 				{
 					l=0;
@@ -273,6 +272,17 @@ define(["jquery", "jquery-cookie"], function($){
 				$(".bigpic img").css("top",_top);
 			})
 
+			//立即购买闪烁
+			$(".buy").mousedown(function(){
+				$(".buy").css("color","black");
+				$(".buy_ok").css("opacity",0.7);
+			})
+			$(".buy").mouseup(function(){
+				$(".buy").css("color","white");
+				$(".buy_ok").stop().animate({"opacity":0},500);
+				$(".buy_ok").css("opacity",0.7);
+				
+			})
 
 
 

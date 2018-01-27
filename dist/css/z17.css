@@ -116,6 +116,19 @@ header {
     .title ul li:hover {
       border-bottom: 2px solid #e3381f; }
 
+.buy_ok {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background: red;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  border-radius: 15px;
+  line-height: 30px;
+  right: 0;
+  top: 1280px; }
+
 .main {
   width: 1200px;
   margin: 0 auto;

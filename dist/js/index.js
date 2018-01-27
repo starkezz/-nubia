@@ -110,7 +110,6 @@ define(["jquery", "jquery-cookie"], function($){
 				$(".play .tab .tab2 ul").eq(_index).css("display","block");
 				$(".play .tab .tab2 ul").eq(_index).siblings().css("display","none");
 				$(".play .tab ol").css("display","block");
-				document.title = _index;
 			})
 			$(".play").on("mouseleave",function(){
 				$(".play .tab ul").css("display","none");
