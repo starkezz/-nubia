@@ -36,10 +36,12 @@ define(["jquery", "jquery-cookie"], function($){
 			var left_top = $(window).scrollTop();
 			if(left_top >= 127 && left_top < 620 ){		
 				$(".main_left").css({"position":"fixed","top":0});
+				//$(".bigpic").css({"position":"fixed","top":0});
 			}else if(left_top >= 620){
 				$(".main_left").css({"position":"absolute","bottom":0});
 			}else{
 				$(".main_left").css({"position":""});
+				//$(".bigpic").css({"position":""});
 			}
 
 
@@ -58,6 +60,7 @@ define(["jquery", "jquery-cookie"], function($){
 					$(".main_left ul li").eq(3).find("img").attr("src",res[0].pic4);
 					//显示大图
 					$(".main_left .pic1").attr("src",res[0].pic1);
+					$(".main .bigpic img").attr("src",res[0].pic1);
 
 					//点击切换图片
 					$(".main_left ul li").eq(0).click(function(){
@@ -94,6 +97,10 @@ define(["jquery", "jquery-cookie"], function($){
 						//显示大图
 						$(".main_left .pic1").attr("src",res[1].pic1);
 
+						//顶部信息显示
+						$(".top_color").html(res[1].color);
+						$(".top_price").html(res[1].price);
+
 						//点击切换图片
 						$(".main_left ul li").eq(0).click(function(){
 							$(".main_left .pic1").attr("src",res[1].pic1);
@@ -128,6 +135,9 @@ define(["jquery", "jquery-cookie"], function($){
 						$(".main_left ul li").eq(3).find("img").attr("src",res[0].pic4);
 						//显示大图
 						$(".main_left .pic1").attr("src",res[0].pic1);
+						//顶部信息显示
+						$(".top_color").html(res[0].color);
+						$(".top_price").html(res[0].price);
 
 						//点击切换图片
 						$(".main_left ul li").eq(0).click(function(){
@@ -210,6 +220,57 @@ define(["jquery", "jquery-cookie"], function($){
 					}
 				}
 
+			})
+
+
+			//放大镜
+			
+			$(".mark").mousemove(function(){
+				$(".layer").css("display","block");
+				$(".bigpic").css("display","block");			
+			})
+				
+			$(".mark").mouseout(function(){
+				$(".layer").css("display","none");
+				$(".bigpic").css("display","none");
+			})
+			
+			
+			$(".mark").mousemove(function(ev){
+				var e = ev || window.event;
+				
+				var l= e.pageX-$(".mark").offset().left - $(".layer").width()/2 ;
+				
+				var t= e.pageY-$(".mark").offset().top;
+				document.title=l+","+t;
+				if(l<0)
+				{
+					l=0;
+				}
+				else if(l >$(".mark").width()-$(".layer").width())
+				{
+					l=$(".mark").width()-$(".layer").width();
+				}
+				
+				if(t<0)
+				{
+					t=0;
+				}
+				else if(t>$(".mark").height()-$(".layer").height())
+				{
+					t=$(".mark").height()-$(".layer").height();
+				}
+				
+				$(".layer").css("left",l);
+				$(".layer").css("top",t);
+				
+				var percentX=l/($(".mark").width()-$(".layer").width());
+				var percentY=t/($(".mark").height()-$(".layer").height());
+				
+				var _left =- percentX * ($(".bigpic img").width()-$(".bigpic").width());
+				var _top = -percentY * ($(".bigpic img").height()-$(".bigpic").height());
+				$(".bigpic img").css("left",_left);
+				$(".bigpic img").css("top",_top);
 			})
 
 

@@ -50,3 +50,8 @@ require(["z17"],function(z17){
 require(["order"],function(order){
 	console.log(order.order());
 })
+
+//要去调用list中的main
+require(["list"],function(list){
+	console.log(list.main());
+})

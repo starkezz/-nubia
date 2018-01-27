@@ -73,6 +73,16 @@ gulp.task("scss-order",() => {
 	.pipe(gulp.dest("dist/css"))
 	.pipe(connect.reload());
 })
+// 整理list.scss
+gulp.task("scss-list",() => {
+	return gulp.src("scss/list.scss")
+	.pipe(scss())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minify())
+	.pipe(rename("list.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
 
 
 /*
@@ -96,7 +106,7 @@ gulp.task("data",() => {
 /*
 	上述操作是整理文件，作为整体，建立一个项目的整体，让他们一起执行。
  */
-gulp.task("build",["copy-html","images","scripts","data","scss-index","scss-login","scss-enroll","scss-z17","scss-order"],()=>{
+gulp.task("build",["copy-html","images","scripts","data","scss-index","scss-login","scss-enroll","scss-z17","scss-order","scss-list"],()=>{
 	console.log("编译成功");
 })
 
@@ -118,6 +128,7 @@ gulp.task("watch",function(){
 	gulp.watch("scss/enroll.scss",["scss-enroll"]);
 	gulp.watch("scss/z17.scss",["scss-z17"]);
 	gulp.watch("scss/order.scss",["scss-order"]);
+	gulp.watch("scss/list.scss",["scss-list"]);
 
 
 	

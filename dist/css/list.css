@@ -9,6 +9,13 @@ li {
 img {
   display: inline-block; }
 
+a {
+  text-decoration: none;
+  color: white; }
+
+/*
+	网页顶部
+ */
 header {
   width: 100%;
   background: black;
@@ -79,90 +86,76 @@ header {
           font-size: 12px;
           margin-top: 20px; }
 
-.cart_bg {
-  background: url(https://static.nubia.cn/images/bg_payorder_1.png) no-repeat center;
+.pic_girl {
+  position: relative;
   width: 100%;
-  height: 180px; }
+  height: 464px;
+  overflow: hidden; }
+  .pic_girl img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1920px;
+    margin-left: -960px;
+    height: 464px; }
 
-.cart_h1 {
-  width: 1200px;
-  margin: 0 auto; }
-
-.goods_box {
-  width: 1200px;
+.type {
+  width: 1080px;
   margin: 0 auto;
-  font-size: 12px;
-  color: #727171;
-  border: 1px solid #eef0f0; }
-  .goods_box thead {
-    background: #f7f9f9; }
-  .goods_box tbody {
-    border: 1px solid #eef0f0; }
-    .goods_box tbody img {
-      width: 100px;
-      height: 100px; }
-    .goods_box tbody p {
-      display: inline-block;
-      font-size: 16px; }
-    .goods_box tbody div {
-      width: 102px;
-      border: 1px solid #ccc;
-      overflow: hidden;
-      display: inline-block; }
-      .goods_box tbody div span {
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        display: inline-block;
-        float: left; }
-      .goods_box tbody div span:hover {
-        cursor: pointer; }
-      .goods_box tbody div input {
-        height: 25px;
-        width: 50px;
-        text-align: center;
-        border: none;
-        display: inline-block;
-        border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-        float: left; }
-  .goods_box tfoot {
-    border: 1px solid #eef0f0; }
-    .goods_box tfoot td:nth-child(4) {
-      text-align: right; }
-    .goods_box tfoot td:nth-child(5) {
-      text-align: left; }
-
-/*结算按钮*/
-.ordercheck {
-  width: 1200px;
-  height: 70px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 70px;
+  overflow: hidden;
   font-size: 14px;
-  border: 1px solid #e7e7e7;
-  margin-bottom: 20px; }
-  .ordercheck .continue {
-    display: inline-block;
-    margin-right: 50px;
-    text-decoration: none;
-    width: 100px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 20px;
-    color: red;
-    border: 1px solid red; }
-  .ordercheck .go {
-    display: inline-block;
-    margin-right: 50px;
-    text-decoration: none;
-    background: red;
-    width: 100px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 20px;
-    color: white; }
+  color: #999899; }
+  .type ul {
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f1f1; }
+    .type ul li {
+      float: left;
+      border-right: 1px solid #ddd0cc;
+      border-left: 1px solid #d7e7ff;
+      padding: 0 10px; }
+    .type ul li:nth-child(1) {
+      border-left: none; }
+    .type ul li:last-child {
+      border-right: none; }
+  .type ul:last-child {
+    margin-top: 0;
+    border-bottom: none; }
+
+.goods_list {
+  width: 1200px;
+  overflow: hidden;
+  margin: 0 auto; }
+  .goods_list li {
+    float: left;
+    width: 292px;
+    height: 300px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    color: #666666; }
+    .goods_list li .pic_box {
+      overflow: hidden;
+      background: red;
+      position: relative;
+      width: 240px;
+      height: 240px;
+      display: inline-block; }
+      .goods_list li .pic_box img {
+        width: 240px;
+        height: 240px;
+        transition: 0.7s; }
+  .goods_list li:nth-child(4n+1) {
+    margin-left: 0;
+    width: 294px; }
+  .goods_list li:hover img {
+    transform: scale(1.05); }
+  .goods_list li:hover .dis {
+    color: red; }
 
 /*总目录*/
 .all {

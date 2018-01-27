@@ -1,10 +1,11 @@
 *{margin: 0;padding: 0;}
 li{list-style: none;}
 img{display: inline-block;}
+a{text-decoration: none;color: white;}
 /*
 	网页顶部
  */
-body{position: relative;height: 4000px;}
+body{position: relative;}
 header{width: 100%; background: black;position: relative;
 	.top_menu{width:1200px;height: 66px; background: black;margin: 0 auto;
 		img{width:139px;margin-left: 15px;display: block;float: left;margin-top: 8px;}
@@ -42,6 +43,8 @@ header{width: 100%; background: black;position: relative;
 .main{width: 1200px;margin: 0 auto;position: relative;overflow: hidden;border-bottom: 1px solid #e5e5e5;
 	.main_left{width: 565px;text-align: center;position: relative;overflow: hidden;float: left;
 		.pic1{margin-top: 50px;}
+		.mark{width:576px; height:576px; position:absolute; z-index:15;top:50px; background:red; opacity:0;left: 0;}
+		.layer{width: 100px; height: 100px; border: 1px solid #000; background: #fff;  opacity: 0.3; position: absolute; top: 50px; left: 0; display:none;}
 		p{position: absolute;top: 580px;left: 220px;
 			img{width: 100px;}
 		}
@@ -56,6 +59,14 @@ header{width: 100%; background: black;position: relative;
 			span{display: inline-block;float: left;margin-right: 30px;}
 		}
 	}
+	/*大图*/
+	.bigpic{
+		width:300px;height: 300px;position: fixed;overflow: hidden;z-index: 15px;left: 650px;top:150px;display: none;
+		img{width: 700px;height: 700px;position: absolute;}
+	}
+
+
+
 	.right{
 		width: 605px;overflow: hidden;float: right;margin-bottom: 120px;
 		.buy1{ 
@@ -104,7 +115,11 @@ header{width: 100%; background: black;position: relative;
 	}
 }
 
-.top{width: 1200px;height: 0;position: fixed;background: pink;z-index: 10;top: 0;left:0;right:0;margin:auto;display: none;}
+.top{width:100%;height: 0;position: fixed;background: white;z-index: 10;top: 0;left:0;right:0;margin:auto;display: none;
+	p{width: 1200px;height: 60px;text-align: right;line-height: 60px;font-size: 14px;color: gray;
+		.top_buy{width: 126px;height:40px;background: red;color: white;display: inline-block;text-align: center;line-height: 40px;border-radius: 3px;}
+	}
+}
 
 .tab_cont{width: 1200px;height: 60px;line-height: 60px;margin: 0 auto;
 	span{display: inline-block;margin-left: 50px;}
