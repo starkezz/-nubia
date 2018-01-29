@@ -96,6 +96,7 @@ define(["jquery", "jquery-cookie"], function($){
 						$(".main_left ul li").eq(3).find("img").attr("src",res[1].pic4);
 						//显示大图
 						$(".main_left .pic1").attr("src",res[1].pic1);
+						$(".main .bigpic img").attr("src",res[1].pic1);
 
 						//顶部信息显示
 						$(".top_color").html(res[1].color);
@@ -104,21 +105,25 @@ define(["jquery", "jquery-cookie"], function($){
 						//点击切换图片
 						$(".main_left ul li").eq(0).click(function(){
 							$(".main_left .pic1").attr("src",res[1].pic1);
+							$(".main .bigpic img").attr("src",res[1].pic1);
 							$(".main_left ul li").eq(0).attr("class","active");
 							$(".main_left ul li").eq(0).siblings().attr("class","");
 						})
 						$(".main_left ul li").eq(1).click(function(){
 							$(".main_left .pic1").attr("src",res[1].pic2);
+							$(".main .bigpic img").attr("src",res[1].pic2);
 							$(".main_left ul li").eq(1).attr("class","active");
 							$(".main_left ul li").eq(1).siblings().attr("class","");
 						})
 						$(".main_left ul li").eq(2).click(function(){
 							$(".main_left .pic1").attr("src",res[1].pic3);
+							$(".main .bigpic img").attr("src",res[1].pic3);
 							$(".main_left ul li").eq(2).attr("class","active");
 							$(".main_left ul li").eq(2).siblings().attr("class","");
 						})
 						$(".main_left ul li").eq(3).click(function(){
 							$(".main_left .pic1").attr("src",res[1].pic4);
+							$(".main .bigpic img").attr("src",res[1].pic4);
 							$(".main_left ul li").eq(3).attr("class","active");
 							$(".main_left ul li").eq(3).siblings().attr("class","");
 						})
@@ -135,6 +140,7 @@ define(["jquery", "jquery-cookie"], function($){
 						$(".main_left ul li").eq(3).find("img").attr("src",res[0].pic4);
 						//显示大图
 						$(".main_left .pic1").attr("src",res[0].pic1);
+						$(".main .bigpic img").attr("src",res[0].pic1);
 						//顶部信息显示
 						$(".top_color").html(res[0].color);
 						$(".top_price").html(res[0].price);
@@ -142,21 +148,25 @@ define(["jquery", "jquery-cookie"], function($){
 						//点击切换图片
 						$(".main_left ul li").eq(0).click(function(){
 							$(".main_left .pic1").attr("src",res[0].pic1);
+							$(".main .bigpic img").attr("src",res[0].pic1);
 							$(".main_left ul li").eq(0).attr("class","active");
 							$(".main_left ul li").eq(0).siblings().attr("class","");
 						})
 						$(".main_left ul li").eq(1).click(function(){
 							$(".main_left .pic1").attr("src",res[0].pic2);
+							$(".main .bigpic img").attr("src",res[0].pic2);
 							$(".main_left ul li").eq(1).attr("class","active");
 							$(".main_left ul li").eq(1).siblings().attr("class","");
 						})
 						$(".main_left ul li").eq(2).click(function(){
 							$(".main_left .pic1").attr("src",res[0].pic3);
+							$(".main .bigpic img").attr("src",res[0].pic3);
 							$(".main_left ul li").eq(2).attr("class","active");
 							$(".main_left ul li").eq(2).siblings().attr("class","");
 						})
 						$(".main_left ul li").eq(3).click(function(){
 							$(".main_left .pic1").attr("src",res[0].pic4);
+							$(".main .bigpic img").attr("src",res[0].pic4);
 							$(".main_left ul li").eq(3).attr("class","active");
 							$(".main_left ul li").eq(3).siblings().attr("class","");
 						})
