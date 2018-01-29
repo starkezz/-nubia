@@ -65,21 +65,25 @@ define(["jquery", "jquery-cookie"], function($){
 					//点击切换图片
 					$(".main_left ul li").eq(0).click(function(){
 						$(".main_left .pic1").attr("src",res[0].pic1);
+						$(".main .bigpic img").attr("src",res[0].pic1);
 						$(".main_left ul li").eq(0).attr("class","active");
 						$(".main_left ul li").eq(0).siblings().attr("class","");
 					})
 					$(".main_left ul li").eq(1).click(function(){
 						$(".main_left .pic1").attr("src",res[0].pic2);
+						$(".main .bigpic img").attr("src",res[0].pic2);
 						$(".main_left ul li").eq(1).attr("class","active");
 						$(".main_left ul li").eq(1).siblings().attr("class","");
 					})
 					$(".main_left ul li").eq(2).click(function(){
 						$(".main_left .pic1").attr("src",res[0].pic3);
+						$(".main .bigpic img").attr("src",res[0].pic3);
 						$(".main_left ul li").eq(2).attr("class","active");
 						$(".main_left ul li").eq(2).siblings().attr("class","");
 					})
 					$(".main_left ul li").eq(3).click(function(){
 						$(".main_left .pic1").attr("src",res[0].pic4);
+						$(".main .bigpic img").attr("src",res[0].pic4);
 						$(".main_left ul li").eq(3).attr("class","active");
 						$(".main_left ul li").eq(3).siblings().attr("class","");
 					})
